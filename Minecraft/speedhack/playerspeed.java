@@ -1,3 +1,5 @@
+import net.minecraft.util.math.Vec3d;
+
 public final class PlayerSpeed extends Hack implements UpdateListener
 {
 	public ()
