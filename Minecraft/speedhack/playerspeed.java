@@ -1,4 +1,4 @@
-public final class SpeedHackHack extends Hack implements UpdateListener
+public final class PlayerSpeed extends Hack implements UpdateListener
 {
 	public ()
 	{
