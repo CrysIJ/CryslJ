@@ -10,18 +10,16 @@ public final class PlayerSpeed extends Hack implements UpdateListener
 				+"This is currently indev");
 		setCategory(Category.MOVEMENT);
 	}
-	/*
-	* When hack is enabled.
-	*/
+	// When hack is enabled.
+
 	@Override
 	public void onEnable()
 	{
 {
 		EVENTS.add(UpdateListener.class, this);
 	}
-	/*
-	* When hack is disabled.
-	*/
+	// When hack is disabled.
+	
 	@Override
 	public void onDisable()
 	{
@@ -31,16 +29,16 @@ public final class PlayerSpeed extends Hack implements UpdateListener
 	@Override
 	public void onUpdate()
 	{
-		// return if sneaking or not walking
+		// Returns if the player sneaking or not walking
 		if(MC.player.isSneaking()
 			|| MC.player.forwardSpeed == 0 && MC.player.sidewaysSpeed == 0)
 			return;
 		
-		// activate sprint if walking forward
+		// Activates player sprint if walking forward
 		if(MC.player.forwardSpeed > 0 && !MC.player.horizontalCollision)
 			MC.player.setSprinting(true);
 		
-		// activate mini jump if on ground
+		// Activates player jump if on the ground
 		if(!MC.player.isOnGround())
 			return;
 		
